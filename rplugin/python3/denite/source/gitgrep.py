@@ -7,7 +7,7 @@ class Source(Grep):
         super().__init__(vim)
 
         self.name = 'grep/git'
-        self.vars = {
+        self.vars.update({
             'command': ['git', '--no-pager', 'grep'],
             'default_opts': ['-n', '--no-color'],
             'recursive_opts': [],
@@ -15,4 +15,4 @@ class Source(Grep):
             'separator': ['--'],
             'final_opts': [],
             'min_interactive_pattern': 3,
-        }
+        })
